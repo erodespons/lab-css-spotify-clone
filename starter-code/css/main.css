@@ -7,91 +7,104 @@ White: #FFF
 
 */
 
-body{
+body {
   font-family: sans-serif;
   margin: 0px;
   padding: 0px;
 }
 
-header{
+header {
   height: 80px;
   margin: 0px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
 }
 
-h1{
-  font-size: 80px;
-  font-weight: normal;
-  color: #FFF;
-}
-
-h2{
-  font-size: 28px;
-  font-weight: lighter;
-  color: #FFF;
-}
-
-.logo{
+.content-logo {
   display: inline-block;
-  position: absolute;
-  height: 100%;
+  width: 700px;
+}
+
+.logo {
   width: 200px;
-  background-image: url(../images/spotify-logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
   margin: 10px;
-  animation-name: shake;
-  animation-duration: 0.8s;
-  animation-iteration-count: 1;
-  animation-timing-function:ease-in-out;
-  animation-play-state:paused;
+  vertical-align: middle;
+  /*centra el resto de componentes respecto a si mismo*/
+  z-index: 10;
 }
 
 .logo:hover {
-  animation-play-state:running;
+  animation: shake 1s;
+  cursor: pointer;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes shake {
-  10% {width: 240px; margin: 4px;}
-  20% {width: 200px; margin: 10px;}
-  30% {width: 240px; margin: 4px;}
-  40% {width: 200px; margin: 10px;}
-  50% {width: 240px; margin: 4px;}
-  60% {width: 200px; margin: 10px;}
-  70% {width: 240px; margin: 4px;}
-  80% {width: 200px; margin: 10px;}
-  90% {width: 240px; margin: 4px;}
-  100% {width: 200px; margin: 10px;}
+  0% {
+    width: 240px;
+    margin: 4px;
+    opacity: 0.9;
+  }
+  20% {
+    width: 200px;
+    margin: 10px;
+    opacity: 1;
+  }
+  40% {
+    width: 240px;
+    margin: 4px;
+    opacity: 0.9;
+  }
+  60% {
+    width: 200px;
+    margin: 10px;
+    opacity: 1;
+  }
+  80% {
+    width: 240px;
+    margin: 4px;
+    opacity: 0.9;
+  }
+  100% {
+    width: 200px;
+    margin: 10px;
+    opacity: 1;
+  }
 }
 
-.top-nav{
+.top-nav {
   display: inline-block;
-  position: absolute;
   right: 0;
-  margin: 20px;
+  width: 650px;
   text-align: right;
+  right: 0px;
+  margin: 20px;
 }
 
-.top-nav li{
+.top-nav li {
   display: inline-block;
-  list-style:none;
+  list-style: none;
 }
 
-.top-nav a{
+.top-nav a {
   display: inline-block;
   color: black;
   text-align: center;
   text-decoration: none;
-  font-weight:lighter;
+  font-weight: lighter;
   font-size: 20px;
   margin: 4px;
   transition-property: color;
 }
 
-section{
+section {
   width: 100%;
+  vertical-align: top;
 }
 
-.landing{
+.landing {
   height: 800px;
   width: 100%;
   background-image: url(../images/landing.jpg);
@@ -100,23 +113,71 @@ section{
   background-position: center;
 }
 
-.landing-text{
+.landing-text {
   width: 100%;
-  position: absolute;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 15%;
 }
 
-.on-spotify{
-  position: relative;
-  top: 8000px;
+h1 {
+  font-size: 80px;
+  font-weight: normal;
+  color: #FFF;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: lighter;
+  color: #FFF;
+}
+
+.on-spotify {
+  top: 0px;
   width: 100%;
-  height: 2000px;
+  height: 550px;
+  width: 100%;
 }
 
-.icons{
+.whats-on {
+  width: 100%;
+  height: 25%;
+}
+
+.whats-on h1 {
+  vertical-align: middle;
+  text-align: center;
+  margin: 0px;
+  font-size: 36px;
+  color: black;
+  height: 100%;
+  padding-top: 30px;
+}
+
+.whats-on hr {
+  width: 285px;
+  border: solid 2px #00B172;
+}
+
+.icons {
+  vertical-align: top;
   display: inline-block;
-  background-color: blue;
-  height: 450px;
-  width: 33%;
+  text-align: center;
+  width: 33.1%;
+  height: 75%;
+  margin-top: 50px;
+}
+
+.icons img {
+  width: 35%;
+}
+
+.icons h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00B172;
+}
+
+.icons p {
+  font-size: 24px;
+  font-weight: lighter;
 }
